@@ -12,6 +12,7 @@ ASP.NET の customErrors、IIS の httpErrors のサンプルです。
   </customErrors>
 </system.web>
 ```
+
 ```xml
 <!-- IIS -->
 <system.webServer>
@@ -23,6 +24,9 @@ ASP.NET の customErrors、IIS の httpErrors のサンプルです。
   </httpErrors>
 </system.webServer>
 ```
+
+詳細はこちらの commit へ
+- [カスタムエラーを構成](/commit/7ae6a2cd133d017c4bbdc13c1fd5d0b08a3d55e5)
 
 License
 -------

@@ -1,5 +1,4 @@
-﻿using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace WebApplication
 {
@@ -7,7 +6,8 @@ namespace WebApplication
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new HandleErrorAttribute());
+            // エラーをカスタムするので標準のハンドルは使用しない
+            //filters.Add(new HandleErrorAttribute());
         }
     }
 }

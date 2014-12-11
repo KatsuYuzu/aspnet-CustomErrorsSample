@@ -25,8 +25,24 @@ ASP.NET の customErrors、IIS の httpErrors のサンプルです。
 </system.webServer>
 ```
 
-詳細はこちらの commit へ
-- [カスタムエラーを構成](https://github.com/KatsuYuzu/aspnet-CustomErrorsSample/commit/7ae6a2cd133d017c4bbdc13c1fd5d0b08a3d55e5)
+動作を確認できるようにパラメーターを利用しています。通常は ASP.NET と IIS のエラーを区別する必要はないでしょう。
+
+```csharp
+public class ErrorController : Controller
+{
+    public ActionResult Index(string source, int statusCode)
+    {
+        ViewBag.Source = source;
+        ViewBag.StatusCode = statusCode;
+
+        return View();
+    }
+}
+```
+
+詳細はこちらへ
+- [commit カスタムエラーを構成](https://github.com/KatsuYuzu/aspnet-CustomErrorsSample/commit/7ae6a2cd133d017c4bbdc13c1fd5d0b08a3d55e5)
+- [ASP.NET の customErrors、IISの httpErrors #aspnetjp - KatsuYuzuのブログ](http://katsuyuzu.hatenablog.jp/entry/2014/12/10/080000)
 
 License
 -------

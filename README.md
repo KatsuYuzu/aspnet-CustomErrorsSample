@@ -19,8 +19,8 @@ ASP.NET の customErrors、IIS の httpErrors のサンプルです。
   <httpErrors errorMode="Custom">
     <remove statusCode="404"/>
     <remove statusCode="500"/>
-    <error statusCode="404" path="../Error?source=IIS&amp;statusCode=404" responseMode="Redirect"/>
-    <error statusCode="500" path="../Error?source=IIS&amp;statusCode=500" responseMode="Redirect"/>
+    <error statusCode="404" path="http://localhost:60786/Error?source=IIS&amp;statusCode=404" responseMode="Redirect"/>
+    <error statusCode="500" path="http://localhost:60786/Error?source=IIS&amp;statusCode=500" responseMode="Redirect"/>
   </httpErrors>
 </system.webServer>
 ```
